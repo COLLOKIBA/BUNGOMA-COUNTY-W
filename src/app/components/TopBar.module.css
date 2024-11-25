@@ -1,0 +1,57 @@
+/* TopBar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff; /* White background for a clean look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-bottom: 1px solid #e1e1e1; /* Light border for separation */
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.date {
+  font-size: 14px;
+  color: #333333; /* Dark text color for readability */
+}
+
+.arrow {
+  font-size: 18px;
+  color: #333333; /* Dark arrow color for contrast */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.arrow:hover {
+  color: #007bff; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.arrow:active {
+  transform: scale(0.9); /* Slight shrink effect on click */
+}
+
+.center {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #333333; /* Dark icon color for contrast */
+  transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.icon:hover {
+  color: #007bff; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.icon:active {
+  transform: scale(0.9); /* Slight shrink effect on click */
+}

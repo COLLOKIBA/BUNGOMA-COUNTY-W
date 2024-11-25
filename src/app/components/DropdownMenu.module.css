@@ -1,0 +1,49 @@
+/* components/Dropdown.module.css */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none; /* Ensure no default border */
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  padding:10px 20px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: poppins;
+}
+
+.dropdownContent a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 20px;
+}
+
+.dropdownContent a:hover {
+  background-color: #28a745;
+  color: #ffffff;
+ 
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ffffff;
+  color: #28a745;
+}

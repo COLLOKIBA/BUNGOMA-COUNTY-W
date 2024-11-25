@@ -1,0 +1,46 @@
+.gridContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.picturesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.picture {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover;
+}
+
+.subheroContainer {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+
+/* Mobile View: Adjustments for screens with max width of 411px */
+@media (max-width: 411px) {
+  .gridContainer {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .subheroContainer {
+    margin-left: 0;
+  }
+
+  .picture {
+    width: 100vw; /* Adjust the size for mobile */
+    height: 150px;
+    margin-bottom: 8px;
+    border-radius: 2%;
+ 
+  }
+}

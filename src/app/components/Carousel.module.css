@@ -1,0 +1,48 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Ensure that the carousel container doesn't exceed 600px */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+.carouselImage {
+  width: 100%;    /* Image width fills the container */
+  height: 100%;   /* Image height fills the container */
+  max-width: 600px;   /* Ensure image width doesn't exceed 600px */
+  max-height: 800px;  /* Ensure image height doesn't exceed 800px */
+  object-fit: cover;  /* Ensures the image is cropped to fit the container */
+  border-radius: 10px;  /* Optional: adds rounded corners */
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: #333;
+}

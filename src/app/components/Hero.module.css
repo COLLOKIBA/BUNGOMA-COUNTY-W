@@ -1,0 +1,14 @@
+.hero-section {
+  width: 100vw; /* Full viewport width */
+  height: 50vh; /* Half viewport height */
+  overflow: hidden; /* Hide any overflow */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.hero-section img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}

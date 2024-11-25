@@ -1,0 +1,237 @@
+/* Common styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.homeIcon {
+  width: 200px;
+  height: 80px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.links {
+  display: flex;
+  align-items: left;
+  gap: 15px;
+  font-weight: 700;
+
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 0.3s;
+  font-family: 'poppins';
+}
+
+.links a:hover,
+.links .active {
+  color: #28a745;
+}
+
+.active {
+  border-bottom: 2px solid #28a745;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.navButton:hover {
+  color: #0070f3;
+}
+
+/* Dropdown Styles for Desktop */
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdownContainer .showDropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdownContent a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdownContent a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile view */
+@media (max-width: 411px) {
+  .homeIcon {
+    width: 150px;
+    height: 60px;
+  }
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburgerIcon {
+    width: 30px;
+    height: 2px;
+    background: #333;
+    position: relative;
+  }
+
+  .hamburgerIcon::before,
+  .hamburgerIcon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transition: transform 0.3s;
+  }
+
+  .hamburgerIcon::before {
+    top: -8px;
+  }
+
+  .hamburgerIcon::after {
+    top: 8px;
+  }
+
+  .hamburger.active .hamburgerIcon::before {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active .hamburgerIcon::after {
+    transform: rotate(-45deg);
+  }
+
+  .menuOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menuOpen a {
+    padding: 5px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+
+  .dropdownContainer {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .dropdownContent.show {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1002;
+  }
+
+  .dropdownContent a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .dropdownContent a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .backArrow {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #0070f3;
+  }
+}

@@ -1,0 +1,68 @@
+/* TendersPage.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.titleCard {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #9b9b9b;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.linkHover:hover {
+  text-decoration: underline;
+}
+
+.status {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.open {
+  color: #28a745; /* Green for open status */
+}
+
+.closed {
+  color: #dc3545; /* Red for closed status */
+}

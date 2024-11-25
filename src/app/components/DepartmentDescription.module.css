@@ -1,0 +1,114 @@
+.departmentDescription {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  max-width: 1200px; /* Optional: to limit width on large screens */
+  margin: 0 auto; /* Center the container */
+}
+
+.departmentName {
+  font-size: 28px;
+  color: #28a745;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.officerSection {
+  display: flex;
+  flex-direction: row; /* Default for desktop */
+  align-items: flex-start; /* Align items at the start */
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.officerImage {
+  width: 20%;
+  height: 300px;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.officerInfo {
+  flex: 1;
+  min-width: 200px; /* Ensure minimum width for readability */
+}
+
+.officerName {
+  font-size: 22px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.officerPosition {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.officerDescription {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.officerContact {
+  font-size: 14px;
+  color: #28a745;
+}
+
+.officerContact a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.officerContact a:hover {
+  text-decoration: underline;
+}
+
+.toggleButton {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.toggleButton:hover {
+  background-color: #218838;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .officerSection {
+    flex-direction: column; /* Stack image and info vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .officerImage {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 200px; /* Adjust image size for mobile */
+    height: 150px; /* Adjust image size for mobile */
+  }
+
+  .officerInfo {
+    flex: 1; /* Allow content to grow and shrink as needed */
+    min-width: unset; /* Remove min-width constraint */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .officerDescription {
+    text-align: left; /* Left-align description text for better readability */
+  }
+}
